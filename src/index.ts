@@ -1,12 +1,12 @@
 // Importing object bases (CompBase, LayerBase, PropertyBase)
 // TypeScript types (Layer, Comp, Value, Color etc)
 // and global functions from 'expression-globals-typescript'
-import { Comp, Layer, Property } from 'expression-globals-typescript';
+import { Comp, Layer, Property, Vector } from 'expression-globals-typescript';
 
 // Creating a new composition object from CompBase
 const thisComp = new Comp();
 const thisLayer = new Layer();
-const thisProperty = new Property<number>(0);
+const thisProperty = new Property<Vector>([0, 0, 0]);
 
 interface SpringProps {
   mass: number;
@@ -51,10 +51,12 @@ function spring(
   const prevKey = thisProperty.key(currentKeyIndex - 1);
   const currentKey = thisProperty.key(currentKeyIndex);
 
-  return (
-    prevKey.value +
-    (currentKey.value - prevKey.value) * getVal(time - currentKey.time)
+  const valueDelta = thisLayer.sub(currentKey.value, prevKey.value);
+  const progressedAmount = thisLayer.mul(
+    valueDelta,
+    getVal(time - currentKey.time)
   );
+  return thisLayer.add(prevKey.value, progressedAmount);
 
   function getLastKeyIndex() {
     // Set curKey to the previous keyframe

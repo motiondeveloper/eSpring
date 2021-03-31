@@ -25,7 +25,7 @@ function spring(options: LibraryProps, time = thisLayer.time) {
   const {
     mass = 1,
     stiffness = 100,
-    damping = 12,
+    damping = 10,
     initialVelocity = 0,
     property = thisProperty,
     __fast = false,

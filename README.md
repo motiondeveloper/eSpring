@@ -4,9 +4,21 @@
 
 Add hold keyframes to a property, call `spring()`, that's it!.
 
-The duration for each animation is set by the spring configuration, so you only need to add one keyframe for each value.
+---
 
-> This project was created with [create-expression-lib](https://github.com/motiondeveloper/create-expression-lib)
+✨ View more details on our website: **[motiondeveloper.com/tools/espring](www.motiondeveloper.com/tools/espring)**
+
+---
+
+- The duration for each animation is set by the spring configuration, so you only need to add one keyframe for each value
+- Correctly animate out of in-progress animations
+- Use phyically modelled springs to quickly get good looking aniamtions
+
+---
+
+🏗 This project was created with [create-expression-lib](https://github.com/motiondeveloper/create-expression-lib) - our utility for creating and managing After Effects `.jsx` libraries.
+
+---
 
 ## Setup
 
@@ -33,26 +45,6 @@ eSpring(options = {
     property = thisProperty,
     __fast = false,
   }, time = thisLayer.time): PropertyValueType
-```
-
-**Returns:** the bounced animation, starting at the keyframe time with the duration set from the spring configuration.
-
-**Options:**
-
-- `mass`, `stiffness`, `damping`, `initialVelocity`: The spring parameters used to control the animation
-- `property`: The property to get the value from
-- `__fast`: This bypasses part of the algorithm that ensures animating out of a in-progress animation is smooth. Setting it to false will give a small speed improvement with less accurate animation in certain scenarios.
-
----
-
-🕹 You can use an [interactive demo here](https://webkit.org/demos/spring/) to play around with different spring configurations.
-
----
-
-The library also exposes a version string you can use to check if it's up to date:
-
-```js
-throw footage('eSpring.jsx').sourceData.version;
 ```
 
 ## Development

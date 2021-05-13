@@ -6,7 +6,7 @@ Add hold keyframes to a property, call `spring()`, that's it!.
 
 ---
 
-✨ View more details on our website: **[motiondeveloper.com/tools/espring](www.motiondeveloper.com/tools/espring)**
+✨ View more details on our website: **[motiondeveloper.com/tools/espring](https://www.motiondeveloper.com/tools/espring)**
 
 ---
 
@@ -22,7 +22,7 @@ Add hold keyframes to a property, call `spring()`, that's it!.
 
 ## Setup
 
-1. Download the latest version from the [releases](https://github.com/motiondeveloper/releases) page.
+1. Download the latest version from the [releases](https://github.com/motiondeveloper/espring/releases) page.
 2. Import it into After Effects
 
 ## Expression
